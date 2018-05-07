@@ -1,24 +1,23 @@
-# README
+# Ashiato
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+旅行や旅先での情報を記録するアプリケーション
+ユーザーは一枚の写真ではなく、旅行先の思い出をストーリー・ブログのように投稿する
 
-Things you may want to cover:
 
-* Ruby version
+/root (旅行一覧)
 
-* System dependencies
+/:user_id/index (ユーザーの旅行先一覧)
+- [ ] ユーザー情報(アイコン、名前、コメント、投稿数、フォロワー、リンクなど)
+- [ ] 旅行先一覧はGoogle Map常にプロットする
+- [ ] 旅行先のサムネイル画像表示と旅行タイトル
 
-* Configuration
+/:user_id/:place_id (各ユーザーの旅行先詳細ページ)
+- [ ] Google Mapの位置情報とコメント
+- [ ] できたらハッシュタグ(タグでもいいや)
+- [ ] 閲覧数
 
-* Database creation
+/users (ユーザー一覧ページ)
+- [ ] ユーザー一覧
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
