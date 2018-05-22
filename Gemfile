@@ -8,6 +8,8 @@ end
 
 gem 'rails', '~> 5.1.5'
 gem 'bootstrap-sass'
+gem 'materialize-sass'
+gem 'material_icons'
 gem 'rails-ujs'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
