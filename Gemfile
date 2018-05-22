@@ -15,13 +15,16 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-# gem 'therubyracer', platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-# gem 'redis', '~> 4.0'
-# gem 'bcrypt', '~> 3.1.7'
-# gem 'capistrano-rails', group: :development
+
+# ominiauth認証関係
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
 
 gem 'webpacker', github: 'rails/webpacker'
 

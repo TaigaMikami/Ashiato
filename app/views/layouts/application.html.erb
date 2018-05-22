@@ -3,12 +3,25 @@
   <head>
     <title>Ashiato</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <%= link_to "Ashiato", root_path, class: "brand-logo right" %>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><%= link_to "Top", root_path %></li>
+          <li><%= link_to "About", about_path %></li>
+        </ul>
+      </div>
+    </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
