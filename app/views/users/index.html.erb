@@ -2,14 +2,14 @@
   <h1>All Users</h1>
 
   <ul class="users">
-    <% @users.each do |user| %>
+    <% @tourists.each do |tourist| %>
       <li>
-        <% if user.image_url %>
-          <%= image_tag user.image_url, size: "36x36" %>
+        <% if tourist.image_url %>
+          <%= image_tag tourist.image_url, size: "36x36" %>
         <% else %>
           <%= image_tag 'default-user.jpeg', size:"36x36" %>
         <% end %>
-        <%= link_to user.name, user %>
+        <%= link_to tourist.name, tourist %>
       </li>
     <% end %>
   </ul>

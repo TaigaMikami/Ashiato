@@ -6,21 +6,23 @@
 
   <%= image_tag "foot.png", size: "200x200" %>
 
-  <div class="omniauth-button">
-    <%= link_to(user_facebook_omniauth_authorize_path) do %>
-      <div class="facebook-back">
-        <i class="fab fa-facebook fa-2x facebook-button"></i>
-        Facebookログイン
-      </div>
-    <% end %>
-    <%= link_to(user_twitter_omniauth_authorize_path) do %>
-      <div class="twitter-back">
-        <i class="fab fa-twitter fa-2x twitter-button"></i>
-        Twitterログイン
-      </div>
-    <% end %>
-  </div>
-  <%= link_to "mail signup", new_user_registration_path %>
+  <% if !user_signed_in? %>
+    <div class="omniauth-button">
+      <%= link_to(user_facebook_omniauth_authorize_path) do %>
+        <div class="facebook-back">
+          <i class="fab fa-facebook fa-2x facebook-button"></i>
+          Facebookログイン
+        </div>
+      <% end %>
+      <%= link_to(user_twitter_omniauth_authorize_path) do %>
+        <div class="twitter-back">
+          <i class="fab fa-twitter fa-2x twitter-button"></i>
+          Twitterログイン
+        </div>
+      <% end %>
+    </div>
+    <%= link_to "mail signup", new_user_registration_path %>
+  <% end %>
 </div>
 
 <script>
