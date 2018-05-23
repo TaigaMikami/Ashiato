@@ -17,3 +17,12 @@
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
+
+@font-face {
+  font-family: 'Nagomi-font';
+  src: font-url("NagomiGokubosoGothic-ExtraLight.otf") format('truetype');
+}
+
+body {
+  font-family: "Nagomi-font";
+}

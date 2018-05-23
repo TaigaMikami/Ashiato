@@ -4,22 +4,13 @@
     <title>Ashiato</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <%= link_to(root_path, class: "brand-logo right") do %>
-          Ashiato<%= image_tag 'foot.png', size:"36x36" %>
-        <% end %>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><%= link_to "Top", root_path %></li>
-          <li><%= link_to "About", about_path %></li>
-        </ul>
-      </div>
-    </nav>
+    <%= render 'layouts/header' %>
     <%= yield %>
   </body>
 </html>
