@@ -26,3 +26,8 @@ $primary-color: color("blue", "lighten-2") !default;
 body {
   font-family: "Nagomi-font";
 }
+
+.box {
+  padding-top: 50px;
+  color: black;
+}
