@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :omniauthable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :created_travels, class_name: 'Travel', foreign_key: uid
+  has_many :created_travels, class_name: 'Travel', foreign_key: :uid
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first

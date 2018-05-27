@@ -28,6 +28,10 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
 
+# 画像アップロード系
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'webpacker', github: 'rails/webpacker'
 
 group :development, :test do

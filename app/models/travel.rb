@@ -1,8 +1,10 @@
 class Travel < ApplicationRecord
-  validate :name, length: { maxinum: 50 }, preference: true
-  validate :start_time, preference: true
-  validate :end_time, preference: true
+  validates :title, length: { maximum: 50 }, presence: true
+  validates :start_time, presence: true
+  validates :end_time, presence: true
   validate :start_time_should_be_before_end_time
+
+  mount_uploader :image_url, ImageUrlUploader
 
   private
 

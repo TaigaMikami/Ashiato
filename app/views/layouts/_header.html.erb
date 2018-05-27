@@ -1,17 +1,27 @@
-<nav>
-  <div class="nav-wrapper">
-    <%= link_to(root_path, class: "brand-logo right") do %>
-      Ashiato<%= image_tag 'foot.png', size:"36x36" %>
-    <% end %>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><%= link_to "Top", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.name, user_path(current_user) %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li></li>
+<header class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navber-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to(root_path, class: "brand-logo right") do %>
+        Ashiato<%= image_tag 'foot.png', size: "36x36" %>
       <% end %>
-    </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Top", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.name, user_path(current_user) %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-</nav>
+</header>

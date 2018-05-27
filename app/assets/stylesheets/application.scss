@@ -10,13 +10,15 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
 
-@import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
-@import 'materialize';
+@import "bootstrap-sprockets";
+@import "bootstrap";
+//@import "materialize/components/color";
+//$primary-color: color("blue", "lighten-2") !default;
+//@import 'materialize';
 
 @font-face {
   font-family: 'Nagomi-font';
@@ -25,9 +27,35 @@ $primary-color: color("blue", "lighten-2") !default;
 
 body {
   font-family: "Nagomi-font";
+  .navbar{
+    position: relative !important;
+    color: white;
+  }
+}
+.navbar-default {
+  border-color: rgba(255,255,255,0.1);;
+  .navbar-nav {
+    li {
+      a {
+        color: #BBBBBB;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
 }
 
-.box {
-  padding-top: 80px;
-  color: black;
+.brand-logo {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  &:hover{
+    text-decoration: none;
+    color: white;
+  }
 }
+
+
+
